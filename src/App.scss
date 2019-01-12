@@ -30,7 +30,7 @@ body {
   align-items:center;
 }
 .layout{
-  background: red;
+  //background: red;
   height:95vh;
   width: 95vw;
 }
@@ -38,32 +38,49 @@ body {
 .header{
   height:20vh;
   background: #feca57;
+   background-image: linear-gradient(#feca57);
   clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
   display:flex;
   justify-content: space-between;
   align-items: center;
   /* flex:auto; */
-}
+  //border: 2px solid green;
+  border-bottom:none;
+  border-radius:10px;
+  border-bottom-left-radius: 0;
+  position: relative;
+
+ }
+  //  .border_div{
+  //   height:2px;
+  //   background: green;
+  //   width:100%;
+  //   position: absolute;
+  //   bottom:20%;
+  //   transform: skewY(calc(-3.5deg * 100vw));
+  // }
+
 .logo__box{
   width:40vw;
-  height:100%;
-   border:1px solid red;
+  //height:100%;
+   //border:1px solid red;
    display: flex;
    justify-content: center;
    align-items:center;
+   align-self: center;
 }
 
 .logo{
-  height:10rem;
-  width:10rem;
-  background:black;
+    //height:10rem;
+  width:50%;
+  //background:black;
   margin: 0 auto;
   /* margin-left:5rem; */
 }
 .nav{
   height:2rem;
   width:50rem;
-  border:1px solid red;
+  //border:1px solid red;
   margin-top:-6rem;
   margin-right:10vw;
   /* align-self: center; */
@@ -96,6 +113,10 @@ body {
   flex-direction:column;
   justify-content: center;
   align-items: center;
+  //border:2px solid green;
+  border-left: none;
+  border-right:none;
+  background: transparent;
 }
 
 .home{
@@ -113,6 +134,9 @@ body {
 .raw{
  animation: moveInRight 3s ;
 }
+// .start{
+
+// }
 .end{
    opacity:1;
    position: absolute;
@@ -127,6 +151,10 @@ body {
   text-align:center;
   clip-path: polygon(0 60% ,100% 0 , 100% 100% , 0 100% );
    margin-top:-10vh;
+  //border: 2px solid green;
+  border-top:none;
+  border-radius:10px;
+  border-top-right-radius: 0;
 }
 
 
@@ -158,7 +186,7 @@ body {
     opacity: .5; }
   100% {
     opacity: 0;
-    display:none;
+    display:none; 
     } }
 
     @keyframes join {
@@ -169,7 +197,8 @@ body {
         transform: translateY(0%) translateX(90%)
       }
        100%{
-        transform: translateY(-70%) translateX(90%)
+        transform: translateY(-70%) translateX(90%);
+         //text-transform: lowercase;
       }
     }
 
@@ -180,3 +209,6 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0px); } }
+
+
+    

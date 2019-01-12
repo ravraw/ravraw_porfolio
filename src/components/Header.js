@@ -4,9 +4,12 @@ import Nav from './Nav';
 
 export default function() {
   return (
-    <header className="header">
-      <Logo />
-      <Nav />
-    </header>
+    <React.Fragment>
+      <header className="header">
+        <Logo />
+        <Nav />
+        <div className="border_div" />
+      </header>
+    </React.Fragment>
   );
 }
