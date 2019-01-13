@@ -259,13 +259,17 @@ img{
   background: #feca57;
   text-align:right;
   display:flex;
-  flex-direction:column;
+  //flex-direction:column;
   justify-content: flex-end;
+  align-items:flex-end;
   clip-path: polygon(0 60% ,100% 0 , 100% 100% , 0 100% );
   margin-top:-10vh;
   border-top:none;
   border-radius:10px;
   border-top-right-radius: 0;
+  img{
+    height:40px;
+  }
 }
 
 
