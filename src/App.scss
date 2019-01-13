@@ -234,7 +234,8 @@ img{
   }
   &__item{
     //align-self: center;
-    border:1px solid red;
+    border:.5px solid lightgray;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.5);
     border-radius:5px;
     min-width:250px;
     max-width:300px;
@@ -246,6 +247,9 @@ img{
     align-items: center;
     flex:1;
     text-transform: uppercase;
+    img{
+    height:150px;
+    }
   }
 }
 
