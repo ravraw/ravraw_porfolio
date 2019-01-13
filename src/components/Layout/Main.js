@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import Projects from './Projects';
-import Contact from './Contact';
-import Skills from './Skills';
+import Home from '../PageViews/Home';
+import About from '../PageViews/About';
+import Projects from '../PageViews/Projects';
+import Contact from '../PageViews/Contact';
+import Skills from '../PageViews/Skills';
 
 export default function() {
   return (
