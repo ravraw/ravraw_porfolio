@@ -11,6 +11,8 @@ export default function Projects() {
         <div className="projects__item">Project-1</div>
         <div className="projects__item">Project-1</div>
         <div className="projects__item">Project-1</div>
+        <div className="projects__item">Project-1</div>
+        <div className="projects__item">Project-1</div>
       </div>
     </div>
   );
