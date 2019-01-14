@@ -95,12 +95,17 @@ body {
   flex:auto;
   list-style: none;
 }
-.link{
+.link__item{
+  text-decoration: none;
   list-style: none;
-  text-transform: uppercase;
-  color:#54a0ff;
-  font-size: 2rem;
+  text-transform: upper;
+  color:gray;
+  font-size: 2.5rem;
   cursor: pointer;
+  font-family: 'Knewave', cursive;
+  &:hover{
+    color:#ff4757;
+  }
   
 }
 
@@ -111,7 +116,7 @@ body {
   display:flex;
   flex-direction:column;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
   //border:2px solid green;
   border-left: none;
   border-right:none;
@@ -122,6 +127,7 @@ body {
   padding:1rem;
   margin:10vh 0;
   //border:1px solid red;
+  //transform:skewY(-2.5deg);
   }
 }
 
