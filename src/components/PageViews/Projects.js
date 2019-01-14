@@ -15,10 +15,9 @@ export default function Projects() {
           name={'Cross aisle'}
           img={crossAisle}
           address="https://github.com/ravraw/grocery_app"
-          img1=
-            "https://raw.githubusercontent.com/ravraw/grocery_app/master/screenshots/home.png"
+          img1="https://raw.githubusercontent.com/ravraw/grocery_app/master/screenshots/home.png"
           img2="https://github.com/ravraw/grocery_app/raw/master/screenshots/category.png"
-            img3="https://github.com/ravraw/grocery_app/raw/master/screenshots/productDetails.png"
+          img3="https://github.com/ravraw/grocery_app/raw/master/screenshots/productDetails.png"
           img4="https://github.com/ravraw/grocery_app/raw/master/screenshots/orderHistory.png"
           img5="https://github.com/ravraw/grocery_app/raw/master/screenshots/compare.png"
           img6="https://github.com/ravraw/grocery_app/raw/master/screenshots/checkout.png"
@@ -27,6 +26,12 @@ export default function Projects() {
           name={'Tinny App'}
           img={tinyApp}
           address="https://github.com/ravraw/lighthouseLabs_tinyApp"
+          img1="https://github.com/ravraw/lighthouseLabs_tinyApp/raw/master/screenShots/register.png"
+          img2="https://github.com/ravraw/lighthouseLabs_tinyApp/raw/master/screenShots/createUrl.png"
+          img3="https://github.com/ravraw/lighthouseLabs_tinyApp/raw/master/screenShots/updateUrl.png"
+          img4="https://github.com/ravraw/lighthouseLabs_tinyApp/raw/master/screenShots/urlCollection.png"
+          img5="https://github.com/ravraw/grocery_app/raw/master/screenshots/compare.png"
+          img6="https://github.com/ravraw/grocery_app/raw/master/screenshots/checkout.png"
         />
         <Project
           name={'Chatty'}
@@ -42,7 +47,6 @@ export default function Projects() {
           name={'Jungle rails'}
           img={crossAisle}
           address="https://github.com/ravraw/jungle-rails"
-          
         />
         <Project
           name={'Resourse wall'}

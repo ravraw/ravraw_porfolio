@@ -5,7 +5,12 @@ export default function ProjectDetails(props) {
   return (
     <div className="project">
       <div className="project__summary">
-        <img className="project__summary_logo" src={data.img} alt="dummy" />
+        <img
+          className="project__summary_logo"
+          src={data.img}
+          alt="dummy"
+          style={{ height: '175px', width: 'auto' }}
+        />
         <div className="project__summary_info">
           <h2>Project Name : {data.name}</h2>
           <h2>
