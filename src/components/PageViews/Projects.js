@@ -15,6 +15,13 @@ export default function Projects() {
           name={'Cross aisle'}
           img={crossAisle}
           address="https://github.com/ravraw/grocery_app"
+          img1=
+            "https://raw.githubusercontent.com/ravraw/grocery_app/master/screenshots/home.png"
+          img2="https://github.com/ravraw/grocery_app/raw/master/screenshots/category.png"
+            img3="https://github.com/ravraw/grocery_app/raw/master/screenshots/productDetails.png"
+          img4="https://github.com/ravraw/grocery_app/raw/master/screenshots/orderHistory.png"
+          img5="https://github.com/ravraw/grocery_app/raw/master/screenshots/compare.png"
+          img6="https://github.com/ravraw/grocery_app/raw/master/screenshots/checkout.png"
         />
         <Project
           name={'Tinny App'}
@@ -35,6 +42,7 @@ export default function Projects() {
           name={'Jungle rails'}
           img={crossAisle}
           address="https://github.com/ravraw/jungle-rails"
+          
         />
         <Project
           name={'Resourse wall'}

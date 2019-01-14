@@ -237,6 +237,8 @@ img{
     border:.5px solid lightgray;
     box-shadow: 1px 2px 5px rgba(0,0,0,.5);
     border-radius:5px;
+    //border-top-left-radius: 50px;
+    //border-top-right-radius: 50px;
     min-width:250px;
     max-width:300px;
     min-height:200px;
@@ -251,6 +253,45 @@ img{
     height:150px;
     }
   }
+}
+
+.project{
+  display:flex;
+  flex-direction:column;
+  overflow:scroll;
+  //width:100%;
+  &__summary{
+    border:1px solid red;
+    min-height:150px;
+    display:flex;
+     justify-content: space-around;
+     align-items: center;
+  &_logo{
+    height:150%;
+    width:150px;
+    border:1px solid red;
+  }
+  &_info{
+    border:1px solid red;
+    width:80%;
+    height:150%;
+  }
+  }
+  &__gallery{
+    padding:1rem;
+    margin:1rem;
+    width:100%;
+    height:100%;
+    border:1px solid green;
+    display:flex;
+    //flex-direction:column;
+    align-items: center;
+    overflow: scroll;
+    > img{
+      padding:1rem;
+    }
+  }
+
 }
 
 
@@ -268,7 +309,7 @@ img{
   border-radius:10px;
   border-top-right-radius: 0;
   img{
-    height:40px;
+    height:30px;
   }
 }
 
