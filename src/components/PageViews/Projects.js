@@ -30,8 +30,6 @@ export default function Projects() {
           img2="https://github.com/ravraw/lighthouseLabs_tinyApp/raw/master/screenShots/createUrl.png"
           img3="https://github.com/ravraw/lighthouseLabs_tinyApp/raw/master/screenShots/updateUrl.png"
           img4="https://github.com/ravraw/lighthouseLabs_tinyApp/raw/master/screenShots/urlCollection.png"
-          img5="https://github.com/ravraw/grocery_app/raw/master/screenshots/compare.png"
-          img6="https://github.com/ravraw/grocery_app/raw/master/screenshots/checkout.png"
         />
         <Project
           name={'Chatty'}

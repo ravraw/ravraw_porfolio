@@ -42,16 +42,20 @@ export default function ProjectDetails(props) {
           alt="img4"
           style={{ height: '300px', width: '450px' }}
         />
-        <img
-          src={data.img5}
-          alt="img5"
-          style={{ height: '300px', width: '450px' }}
-        />
-        <img
-          src={data.img6}
-          alt="img6"
-          style={{ height: '300px', width: '450px' }}
-        />
+        {data.img5 ? (
+          <img
+            src={data.img5}
+            alt="img5"
+            style={{ height: '300px', width: '450px' }}
+          />
+        ) : null}
+        {data.img6 ? (
+          <img
+            src={data.img6}
+            alt="img6"
+            style={{ height: '300px', width: '450px' }}
+          />
+        ) : null}
       </div>
     </div>
   );
