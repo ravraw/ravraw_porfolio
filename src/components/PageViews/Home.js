@@ -13,6 +13,7 @@ export default function Home() {
           <span className="raw">Raw</span>
           <span className="end">at</span>
         </h1>
+        <h1 className="heading__tertiary">.io</h1>
       </div>
     </React.Fragment>
   );
