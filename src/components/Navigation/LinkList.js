@@ -5,19 +5,19 @@ import { NavLink } from 'react-router-dom';
 export default function LinkList() {
   return (
     <ul className="link__list">
-      <NavLink className="link__item" to="/home">
+      <NavLink className="link__item" activeClassName="selected" to="/home">
         Home
       </NavLink>
-      <NavLink className="link__item" to="/about">
+      <NavLink className="link__item" activeClassName="selected" to="/about">
         About
       </NavLink>
-      <NavLink className="link__item" to="/skills">
+      <NavLink className="link__item" activeClassName="selected" to="/skills">
         Skills
       </NavLink>
-      <NavLink className="link__item" to="/projects">
+      <NavLink className="link__item" activeClassName="selected" to="/projects">
         Projects
       </NavLink>
-      <NavLink className="link__item" to="/contact">
+      <NavLink className="link__item" activeClassName="selected" to="/contact">
         Contact
       </NavLink>
     </ul>
