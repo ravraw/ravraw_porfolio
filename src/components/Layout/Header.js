@@ -8,7 +8,6 @@ export default function() {
       <header className="header">
         <Logo />
         <Nav />
-        <div className="border_div" />
       </header>
     </React.Fragment>
   );

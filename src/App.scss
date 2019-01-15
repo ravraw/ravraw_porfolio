@@ -38,16 +38,14 @@ body {
 .header{
   height:20vh;
   background: #feca57;
-  //background-image: linear-gradient(#feca57);
   clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  /* flex:auto; */
-  //border: 2px solid green;
   border-bottom:none;
   border-radius:10px;
   border-bottom-left-radius: 0;
+    font-family: 'Knewave', cursive;
   //position: relative;
 
  }
@@ -62,20 +60,23 @@ body {
 
 .logo__box{
   //width:100%;
-  //height:100%;
-   //border:1px solid red;
+  // height:100%;
+  //  border:1px solid red;
    display: flex;
    justify-content: center;
    align-items:center;
    align-self: center;
+   //transition: all 1s ease;
+  
 }
 
 .logo{
     //height:10rem;
-  width:50%;
-  //background:black;
-  margin: 0 auto;
-  /* margin-left:5rem; */
+font-size:6rem;
+align-self: center;
+animation : changeColor 1s ease-in 5s forwards;
+ color:white;
+
 }
 .nav{
   height:100%;
@@ -103,7 +104,7 @@ body {
   color:gray;
   font-size: 2rem;
   cursor: pointer;
-  font-family: 'Knewave', cursive;
+
   position:relative;
   overflow: hidden;
   //padding:0;
@@ -192,6 +193,7 @@ body {
   flex-direction:column;
    justify-content: center;
   align-items: center;
+  animation:moveOut1 2s 4.5s ease forwards;
 }
 
 .heading__primary{
@@ -210,20 +212,6 @@ body {
   animation:io 1s ease-out 3.5s forwards;
 }
 
-@keyframes io {
-  0%{
-    opacity:0;
-    transform: translate(1000px,-100%)
-  }
-    0%{
-    opacity:0;
-    transform: translate(1000px,-170%)
-  }
-  100%{
-    opacity:1;
-    transform: translate(150%,-170%);
-  }
-}
 
 // .start{
 // }
@@ -465,6 +453,65 @@ img{
   100% {
     opacity: 1;
     transform: translateY(0px); } }
+
+    //io
+
+@keyframes io {
+  0%{
+    opacity:0;
+    transform: translate(1000px,-100%)
+  }
+    0%{
+    opacity:0;
+    transform: translate(1000px,-170%)
+  }
+  100%{
+    opacity:1;
+    transform: translate(150%,-170%);
+  }
+}
+
+    // moveOut
+        @keyframes moveOut1{
+      0%{
+        opacity:1;
+        transform: translate(0,0);
+      }
+        50%{
+        opacity:0;
+        transform: translate(-30%,-50%) scale(0.4);
+      }
+      80%{
+    
+        transform: translate(-30%,-50%);
+      }
+      100%{
+        opacity:0;
+        transform: translate(-40%,-100%);
+      }
+    }
+
+    @keyframes moveOut2{
+      from{
+        opacity:1;
+        transform: translate(32%,-70%);
+      }
+      to{
+        opacity:0;
+        transform: translate(-10%,-100%)
+      }
+    }
+
+    // changeColor
+    @keyframes changeColor{
+      from{
+        color:white;
+      }
+      to {
+        color:red;
+      }
+
+    }
 
 
     // navbar animation
