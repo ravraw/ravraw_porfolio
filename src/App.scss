@@ -104,29 +104,27 @@ animation : changeColor 1s ease-in 5s forwards;
   color:gray;
   font-size: 2rem;
   cursor: pointer;
-
   position:relative;
   overflow: hidden;
-  //padding:0;
   padding: 0 5px ;
   transition: color .35s;
    background: #feca57;
-  // animation : moving 3s both;
-  //  &:nth-child(1){
-  //   animation-delay: 0;
-  // }
-  //  &:nth-child(2){
-  //   animation-delay: .5s;
-  // }
-  //  &:nth-child(3){
-  //   animation-delay: .3s;
-  // }
-  //  &:nth-child(4){
-  //   animation-delay: 1.2s;
-  // }
-  //  &:nth-child(5){
-  //   animation-delay: .7s;
-  // }
+  animation : moving 2s both ;
+   &:nth-child(1){
+    animation-delay: 5s;
+  }
+   &:nth-child(2){
+    animation-delay: 5.5s;
+  }
+   &:nth-child(3){
+    animation-delay: 5.3s;
+  }
+   &:nth-child(4){
+    animation-delay: 6.2s;
+  }
+   &:nth-child(5){
+    animation-delay: 5.7s;
+  }
   &:before{
     content:"";
     position:absolute;
@@ -479,7 +477,7 @@ img{
       }
         50%{
         opacity:0;
-        transform: translate(-30%,-50%) scale(0.4);
+        transform: translate(-30%,-50%) scale(0.42);
       }
       80%{
     
@@ -488,19 +486,12 @@ img{
       100%{
         opacity:0;
         transform: translate(-40%,-100%);
+        z-index: -10;
+        
       }
     }
 
-    @keyframes moveOut2{
-      from{
-        opacity:1;
-        transform: translate(32%,-70%);
-      }
-      to{
-        opacity:0;
-        transform: translate(-10%,-100%)
-      }
-    }
+
 
     // changeColor
     @keyframes changeColor{
