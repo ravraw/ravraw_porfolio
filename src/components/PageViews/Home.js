@@ -1,9 +1,14 @@
 import React from 'react';
+import calgary from '../../assets/images/calgary.png';
+
 
 export default function Home() {
   return (
     <React.Fragment>
-      <div className="home">
+ 
+      <div className="homeImage">
+      
+           <div className="home">
         <h1 className="heading__primary">
           <span>Rav</span>
           <span className="end">indra</span>
@@ -14,7 +19,11 @@ export default function Home() {
           <span className="end">at</span>
         </h1>
         <h1 className="heading__tertiary">.io</h1>
+         
       </div>
+      
+      </div>
+     
     </React.Fragment>
   );
 }

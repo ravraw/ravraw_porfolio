@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 export default function LinkList() {
   return (
     <ul className="link__list">
-      <NavLink className="link__item" activeClassName="selected" to="/home">
+      <NavLink className="link__item" activeClassName="selected" exact to="/">
         Home
       </NavLink>
       <NavLink className="link__item" activeClassName="selected" to="/about">
