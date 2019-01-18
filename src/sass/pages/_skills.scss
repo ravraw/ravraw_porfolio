@@ -1,0 +1,26 @@
+// Skills page view
+
+.skills{
+  @include display-flex(column,nowrap,flex-start,center); 
+  h1{
+    margin:1rem;
+    margin-top:-1rem;
+    text-transform: uppercase;
+  }
+  &__list{
+    width:100%;
+    @include display-flex(row,nowrap,space-evenly,center); 
+  }
+  &__item{
+    border:1px solid red;
+    border-radius:5px;
+    min-width:25rem;
+    min-height:25rem;
+    height:100%;
+    margin:1rem;
+    padding:1rem;
+     @include display-flex(column,nowrap,center,center); 
+    flex:1;
+    text-transform: uppercase;
+  }
+}

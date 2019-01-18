@@ -1,0 +1,14 @@
+
+// Contact page view
+.contact{
+  height:50vh;
+  border:1px solid red;
+  @include display-flex(column,nowrap,center,center);//@mixin 
+  >*{
+    padding:2rem;
+    font-size:2rem;
+  }
+  a{
+    text-decoration: none;
+  }
+}

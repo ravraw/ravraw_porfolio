@@ -1,0 +1,140 @@
+
+/// ---ANIMATION KEYFRAMES ----///
+
+// Home page animation -- primary__heading   text "ravindra"
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%); }
+  70% {
+     opacity: .6;
+    transform: translateX(10%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } 
+  }
+
+// Home page animation secondary__heading  text "rawat"
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(150%); }
+  70% {
+    opacity: .6;
+    transform: translateX(-10%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+// home page animation , fades out text "indra" and "at" in primary and secondary headings
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    }
+  100% {
+    opacity: 0;
+    display:none; 
+    } 
+}
+
+// Home page anmation , joins remaining primary and secondary headings text "rav" and "raw"
+    @keyframes join {
+      0%{
+        transform: translate(0%,0%);
+      }
+      50%{
+        transform: translate(32%,-70%);
+      }
+       100%{
+        transform: translate(32%,-70%);
+      }
+    }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+    
+// Home page animation --- text ".io" moves in from right
+@keyframes io {
+  0%{
+    opacity:0;
+    transform: translate(100rem,-100%)
+  }
+    0%{
+    opacity:0;
+    transform: translate(100rem,-170%)
+  }
+  100%{
+    opacity:1;
+    transform: translate(150%,-170%);
+  }
+}
+
+// home page animation , text "ravraw.io" moves out of view 
+        @keyframes moveOut1{
+      0%{
+        opacity:1;
+        transform: translate(0,0);
+      }
+      45%{
+       opacity:0;
+        transform: translate(-20%,-40%) scale(0.52);
+      }
+        50%{
+        opacity:0;
+        transform: translate(-30%,-50%) scale(0.22);
+      }
+      80%{
+        transform: translate(-30%,-50%);
+      }
+      100%{
+        opacity:0;
+        transform: translate(-40%,-100%);
+        z-index: -10;
+      }
+    }
+
+// Header animation - logo changes color white to red , as text "ravraw.io" moves out of view
+    @keyframes changeColor{
+      from{
+        color:white;
+      }
+      to {
+        color:red;
+      }
+    }
+
+//Home page animation -- buildings moving
+
+@keyframes driving {
+	from { background-position:top left; }
+
+	to { background-position: top right; }
+}
+
+// Header Navbar animated links dropping and bouncing
+    @keyframes moving {
+      0%{
+        transform :translateY(-15rem);
+        transition-timing-function: ease-in;
+      }
+      35%{
+        transform: translateY(0);
+      }
+      55%{
+        transform :translateY(-2rem);
+        box-shadow: none;
+      }
+        75%{
+        transform: translateY(0);
+      }
+       100%{
+        transform :translateY(0);
+        box-shadow: none;
+      }
+    }

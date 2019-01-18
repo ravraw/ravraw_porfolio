@@ -1,0 +1,29 @@
+// Projects page view
+.projects{
+  h1{
+    margin:1rem;
+    margin-top:-1rem;
+    text-align:center;
+    text-transform: uppercase;
+  }
+    &__list{
+    @include display-flex(row,wrap,center,center); 
+    overflow: scroll;
+    margin:0 auto;
+  }
+  &__item{
+    border:.5px solid $color-lightgray;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.5);
+    min-width:25rem;
+    max-width:30rem;
+    min-height:20rem;
+    margin:1rem;
+    padding:1rem;
+    @include display-flex(column,nowrap,center,center); //@mixin 
+    flex:1;
+    text-transform: uppercase;
+    img{
+    height:15rem;
+    }
+  }
+}

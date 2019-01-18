@@ -1,0 +1,36 @@
+// ProjectDetails page view
+.project{
+  flex-direction:column;
+  overflow:scroll;
+  &__summary{
+    min-height:15rem;
+      @include display-flex(row,wrap,space-around,center); //@mixin
+  &_logo{
+    height:150%;
+    width:15rem;
+  }
+  &_info{
+    width:80%;
+    height:150%;
+  }
+  }
+  &__gallery{
+    padding:1rem;
+    margin:1rem;
+    border:2px solid green;
+    border-radius:5px;
+     @include display-flex(row,wrap,space-evenly,center); 
+    > img{
+      margin:1rem;
+      box-shadow: 2px 2px 5px rgba(0,0,0,.5px);
+      border:1px solid $color-gray;
+      border-radius:5px;
+      &:hover{
+      transform:scale(1.2);
+      cursor: pointer;
+      box-shadow: .5rem .5rem 1.5rem rgba(0,0,0,.5px);
+    }
+    }
+  }
+
+}

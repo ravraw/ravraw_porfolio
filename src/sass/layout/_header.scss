@@ -1,0 +1,96 @@
+// Layout > Header componet
+.header{
+  height:20vh;
+  background: $color-primary;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+  @include display-flex(column,wrap,space-around,center);
+  border-bottom:none;
+  border-radius:10px;
+  border-bottom-left-radius: 0;
+  font-family: 'Knewave', cursive;
+
+  // UI > Logo component
+&__logo_box{
+   @include display-flex(row,nowrap,center,center);
+ }
+ &__logo{
+  font-size:6rem;
+  align-self: center;
+  animation : changeColor 1s ease-in 5s both;
+  color:white;
+  }
+}
+
+//Navigation > Nav component
+.nav{
+  height:100%;
+  width:50%;
+  margin-right:10vw;
+}
+.link__list{
+  height: 100%;;
+  width:100%;
+  @include display-flex(row,nowrap,space-around,center);
+  //flex:auto;
+  list-style: none;
+}
+.link__item{
+  text-decoration: none;
+  list-style: none;
+  text-transform: upper;
+  color:$color-gray;
+  font-size: 2rem;
+  cursor: pointer;
+  position:relative;
+  overflow: hidden;
+  padding: 0 .5rem ;
+  transition: color .35s;
+  background: #feca57;
+  animation : moving 2s both ;
+  // main navbar links ---different animation delay for each link
+   &:nth-child(1){
+    animation-delay: 5s;
+  }
+   &:nth-child(2){
+    animation-delay: 5.5s;
+  }
+   &:nth-child(3){
+    animation-delay: 5.3s;
+  }
+   &:nth-child(4){
+    animation-delay: 6.2s;
+  }
+   &:nth-child(5){
+    animation-delay: 5.7s;
+  }
+  // before psudo element for 
+  &:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: $color-secondary;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    transform-origin: bottom left;
+    transform: translateX(-102%);
+    transition: transform .3s;
+  }
+  &:hover:before{
+    transform: translate(0) ;
+    border-radius:5px;
+  }
+  &:hover{
+    color:white;
+    background-clip: text;
+  }
+  
+}
+// active Link styles for react-router <NavLink/>
+.selected{
+  transform:scale(1.2);
+  color:white;
+  background-color: #ff4757;
+  border-radius:5px;
+}
