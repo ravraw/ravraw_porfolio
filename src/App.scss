@@ -8,6 +8,16 @@ $color-gray:gray; //primary gray
 $color-lightgray:lightgray; // light gray
 $color-white:#fff; // primary white
 
+// mixins
+@mixin display-flex($flex-direction,$flex-wrap,$justify-content,$align-items){
+  display:flex;
+  flex-direction:$flex-direction;
+  flex-wrap:$flex-wrap;
+  justify-content:$justify-content;
+  align-items:$align-items;
+}
+
+
 
 // base settings  -- start //
 *,
@@ -49,18 +59,13 @@ body {
   height:20vh;
   background: $color-primary;
   clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: space-around;
-  align-items: center;
+  @include display-flex(column,wrap,space-around,center);
   border-bottom:none;
   border-radius:10px;
   border-bottom-left-radius: 0;
   font-family: 'Knewave', cursive;
 &__logo_box{
-   display: flex;
-   justify-content: center;
-   align-items:center;
+   @include display-flex(row,nowrap,center,center);
  }
  &__logo{
   font-size:6rem;
@@ -80,10 +85,8 @@ body {
 .link__list{
   height: 100%;;
   width:100%;
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
-  flex:auto;
+  @include display-flex(row,nowrap,space-around,center);
+  //flex:auto;
   list-style: none;
 }
 .link__item{
@@ -147,10 +150,7 @@ body {
   height:85vh;
   background: #ff6b6b;
   margin-top:-10vh;
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;  
+  @include display-flex(column,nowrap,center,center); 
   border-left: none;
   border-right:none;
   background: transparent;
@@ -187,10 +187,7 @@ body {
   letter-spacing: .5rem;
   //text-shadow: 0 1px 0 #efefef,0 2px 0 #efefef,0 3px 0 #efefef,0 4px 0 #efefef,0 30px 5px rgba(0,0,0,.1);
   text-shadow: 0 .4rem 0 #efefef,0 3rem .5rem rgba(0,0,0,.5);
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
+  @include display-flex(column,nowrap,center,center); 
   animation:moveOut1 2s 4.5s ease forwards; 
   width:100%;
   height:100%;
@@ -224,10 +221,7 @@ body {
 .about{
   height:100%;
   width:100%;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
+  @include display-flex(row,wrap,center,center); 
   background:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,.9)),
   url(https://images.unsplash.com/photo-1510664691675-9c263a118102?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80) fixed , url(https://images.unsplash.com/photo-1536104968055-4d61aa56f46a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80) fixed;
   background-repeat:no-repeat;
@@ -251,10 +245,7 @@ img{
   width:70%;
   height:100%;
   padding:2rem;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  @include display-flex(column,nowrap,center,center); 
   word-wrap: break-word;
   text-align:justify;
   h1{
@@ -283,10 +274,7 @@ img{
 // skils page
 
 .skills{
-  display:flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction:column;
+  @include display-flex(column,nowrap,flex-start,center); 
   h1{
     margin:1rem;
     margin-top:-1rem;
@@ -294,9 +282,7 @@ img{
   }
   &__list{
     width:100%;
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include display-flex(row,nowrap,space-evenly,center); 
     
   }
   &__item{
@@ -308,9 +294,7 @@ img{
     height:100%;
     margin:1rem;
     padding:1rem;
-    display:flex;
-    flex-flow:column;
-    align-items: center;
+     @include display-flex(column,nowrap,center,center); 
     flex:1;
     text-transform: uppercase;
   }
@@ -319,20 +303,14 @@ img{
 }
 
 .projects{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction:column;
   h1{
     margin:1rem;
     margin-top:-1rem;
+    text-align:center;
     text-transform: uppercase;
   }
     &__list{
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    flex-wrap:wrap;
+    @include display-flex(row,wrap,center,center); 
     overflow: scroll;
     margin:0 auto;
   }
@@ -344,9 +322,7 @@ img{
     min-height:20rem;
     margin:1rem;
     padding:1rem;
-    display:flex;
-    flex-flow:column;
-    align-items: center;
+     @include display-flex(column,nowrap,center,center); 
     flex:1;
     text-transform: uppercase;
     img{
@@ -360,10 +336,7 @@ img{
   overflow:scroll;
   &__summary{
     min-height:15rem;
-    display:flex;
-     justify-content: space-around;
-     align-items: center;
-     flex-wrap:wrap;
+      @include display-flex(row,wrap,space-around,center); 
   &_logo{
     height:150%;
     width:15rem;
@@ -378,10 +351,7 @@ img{
     margin:1rem;
     border:2px solid green;
     border-radius:5px;
-    display:flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap:wrap;
+     @include display-flex(row,wrap,space-evenly,center); 
     > img{
       margin:1rem;
       box-shadow: 2px 2px 5px rgba(0,0,0,.5px);
@@ -400,10 +370,8 @@ img{
 .contact{
   height:50vh;
   border:1px solid red;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include display-flex(column,nowrap,center,center); 
+  
   >*{
     padding:2rem;
     font-size:2rem;
@@ -417,10 +385,7 @@ img{
   height: 10vh;
   background: $color-primary;
   text-align:right;
-  display:flex;
-  //flex-direction:column;
-  justify-content: center;
-  align-items:flex-end;
+  @include display-flex(row,nowrap,center,flex-end);
   clip-path: polygon(0 60% ,100% 0 , 100% 100% , 0 100% );
   margin-top:-10vh;
   border-top:none;
