@@ -10,7 +10,7 @@ export default function About() {
         height="200px"
       />*/}
       <div className="about__bio">
-        <h2> Restaurant manger to Full-stack Web developer</h2>
+        <h1> Restaurant manager to Full-stack Web developer</h1>
         <p>
           It all started by managing a Facebook page for a previous employer,
           which lead me to research more about web development. More I learned,
