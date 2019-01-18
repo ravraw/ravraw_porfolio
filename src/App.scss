@@ -5,7 +5,7 @@
 *::after {
   padding: 0;
   margin: 0;
-  box-sizing: inherit;
+  box-sizing: inherit; // all elements inherit box-sizing:border-box from body
 }
 
 html {
