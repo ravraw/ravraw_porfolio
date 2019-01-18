@@ -1,5 +1,4 @@
 
-
 // variables 
 
 $color-primary: #feca57; // orange
@@ -16,6 +15,18 @@ $color-white:#fff; // primary white
   justify-content:$justify-content;
   align-items:$align-items;
 }
+
+//--- functions---
+// @function add($a,$b){
+//   @return ($a + $b);
+// }
+// add(2 +1);
+
+//---- placeholders ----- 
+//  %btn-placeholder{
+//   color:red;
+// }
+// @extend %btn-placeholder;
 
 
 
@@ -42,7 +53,7 @@ body {
 }
 
 
-
+// App component
 .app{
   height:100vh;
   width:100vw;
@@ -50,11 +61,13 @@ body {
   justify-content: center;
   align-items:center;
 }
+// Layout component
 .layout{
   height:95vh;
   width: 95vw;
 }
 
+// Layout > Header componet
 .header{
   height:20vh;
   background: $color-primary;
@@ -64,6 +77,7 @@ body {
   border-radius:10px;
   border-bottom-left-radius: 0;
   font-family: 'Knewave', cursive;
+  // UI > Logo component
 &__logo_box{
    @include display-flex(row,nowrap,center,center);
  }
@@ -75,8 +89,7 @@ body {
   }
 }
 
-
-
+//Navigation > Nav component
 .nav{
   height:100%;
   width:50%;
@@ -140,12 +153,15 @@ body {
   }
   
 }
+// active Link style for react-router <NavLink/>
 .selected{
   transform:scale(1.2);
   color:white;
   background-color: #ff4757;
   border-radius:5px;
 }
+
+// Main Component --- Displays all components under PageViews folder
 .main{
   height:85vh;
   background: #ff6b6b;
@@ -178,6 +194,8 @@ body {
  animation: driving 15s linear infinite;
 }
 
+
+// pageViews > Home component -- renders the animation  on "/" route.
 .home{
   font-size: 6rem;
   position: relative;
@@ -193,31 +211,30 @@ body {
   height:100%;
 }
 
-
-
+// renders animation for text "Ravindra" @ Home
 .heading__primary{
   animation: moveInLeft 2s ease-in-out;
   margin:0;
   margin-bottom:-3rem;
 }
+// renders animation for text "rawat" @ Home
 .heading__secondary{
   animation: moveInRight 2s ease-in-out,join 1s ease-in 3s forwards;
   margin-top:-3rem;
 }
-
+// renders the animation for text ".io" @ Home
 .heading__tertiary{
   opacity:0;
   animation:io 1s ease-out 3.5s forwards;
 }
 
+// renders animation for text "indra" & "at" in primary and secondary heading classes
 .end{
    opacity:1;
    animation: fadeOut 1s 2s forwards;
 }
 
-
-
-// about page
+// About  page View
 .about{
   height:100%;
   width:100%;
@@ -271,7 +288,7 @@ img{
 
 }
 
-// skils page
+// Skills page view
 
 .skills{
   @include display-flex(column,nowrap,flex-start,center); 
@@ -283,10 +300,8 @@ img{
   &__list{
     width:100%;
     @include display-flex(row,nowrap,space-evenly,center); 
-    
   }
   &__item{
-
     border:1px solid red;
     border-radius:5px;
     min-width:25rem;
@@ -298,10 +313,9 @@ img{
     flex:1;
     text-transform: uppercase;
   }
-
-
 }
 
+// Projects page view
 .projects{
   h1{
     margin:1rem;
@@ -322,7 +336,7 @@ img{
     min-height:20rem;
     margin:1rem;
     padding:1rem;
-     @include display-flex(column,nowrap,center,center); 
+    @include display-flex(column,nowrap,center,center); //@mixin 
     flex:1;
     text-transform: uppercase;
     img{
@@ -331,12 +345,13 @@ img{
   }
 }
 
+// ProjectDetails page view
 .project{
   flex-direction:column;
   overflow:scroll;
   &__summary{
     min-height:15rem;
-      @include display-flex(row,wrap,space-around,center); 
+      @include display-flex(row,wrap,space-around,center); //@mixin
   &_logo{
     height:150%;
     width:15rem;
@@ -367,11 +382,11 @@ img{
 
 }
 
+// Contact page view
 .contact{
   height:50vh;
   border:1px solid red;
-  @include display-flex(column,nowrap,center,center); 
-  
+  @include display-flex(column,nowrap,center,center);//@mixin 
   >*{
     padding:2rem;
     font-size:2rem;
@@ -381,11 +396,12 @@ img{
   }
 }
 
+// Footer component
 .footer{
   height: 10vh;
   background: $color-primary;
   text-align:right;
-  @include display-flex(row,nowrap,center,flex-end);
+  @include display-flex(row,nowrap,center,flex-end);//@mixin
   clip-path: polygon(0 60% ,100% 0 , 100% 100% , 0 100% );
   margin-top:-10vh;
   border-top:none;
@@ -403,6 +419,9 @@ img{
 }
 
 
+/// ---ANIMATION KEYFRAMES ----///
+
+// Home page animation -- primary__heading   text "ravindra"
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -412,8 +431,10 @@ img{
     transform: translateX(10%); }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0); } 
+  }
 
+// Home page animation secondary__heading  text "rawat"
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -425,7 +446,8 @@ img{
     opacity: 1;
     transform: translateX(0); } }
 
-    @keyframes fadeOut {
+// home page animation , fades out text "indra" and "at" in primary and secondary headings
+@keyframes fadeOut {
   0% {
     opacity: 1;
     }
@@ -433,8 +455,9 @@ img{
     opacity: 0;
     display:none; 
     } 
-    }
+}
 
+// Home page anmation , joins remaining primary and secondary headings text "rav" and "raw"
     @keyframes join {
       0%{
         transform: translate(0%,0%);
@@ -455,8 +478,8 @@ img{
     opacity: 1;
     transform: translateY(0px); } }
 
-    //io
-
+    
+// Home page animation --- text ".io" moves in from right
 @keyframes io {
   0%{
     opacity:0;
@@ -471,7 +494,8 @@ img{
     transform: translate(150%,-170%);
   }
 }
-    // moveOut
+
+// home page animation , text "ravraw.io" moves out of view 
         @keyframes moveOut1{
       0%{
         opacity:1;
@@ -495,7 +519,7 @@ img{
       }
     }
 
-    // changeColor
+// Header animation - logo changes color white to red , as text "ravraw.io" moves out of view
     @keyframes changeColor{
       from{
         color:white;
@@ -504,7 +528,8 @@ img{
         color:red;
       }
     }
-// moving buildings
+
+//Home page animation -- buildings moving
 
 @keyframes driving {
 	from { background-position:top left; }
@@ -512,8 +537,7 @@ img{
 	to { background-position: top right; }
 }
 
-    // navbar animation
-
+// Header Navbar animated links dropping and bouncing
     @keyframes moving {
       0%{
         transform :translateY(-15rem);
