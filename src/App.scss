@@ -1,5 +1,15 @@
-// base settings  -- start //
 
+
+// variables 
+
+$color-primary: #feca57; // orange
+$color-secondary:#ff4757; // watermelon red
+$color-gray:gray; //primary gray
+$color-lightgray:lightgray; // light gray
+$color-white:#fff; // primary white
+
+
+// base settings  -- start //
 *,
 *::before,
 *::after {
@@ -21,6 +31,8 @@ body {
   color:#777;
 }
 
+
+
 .app{
   height:100vh;
   width:100vw;
@@ -35,7 +47,7 @@ body {
 
 .header{
   height:20vh;
-  background: #feca57;
+  background: $color-primary;
   clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
   display:flex;
   flex-wrap:wrap;
@@ -45,22 +57,21 @@ body {
   border-radius:10px;
   border-bottom-left-radius: 0;
   font-family: 'Knewave', cursive;
-
- }
-.logo__box{
+&__logo_box{
    display: flex;
    justify-content: center;
    align-items:center;
-   align-self: center;  
-  //flex:1;
+ }
+ &__logo{
+  font-size:6rem;
+  align-self: center;
+  animation : changeColor 1s ease-in 5s both;
+  color:white;
+  }
 }
 
-.logo{
- font-size:6rem;
- align-self: center;
- animation : changeColor 1s ease-in 5s both;
- color:white;
-}
+
+
 .nav{
   height:100%;
   width:50%;
@@ -79,14 +90,14 @@ body {
   text-decoration: none;
   list-style: none;
   text-transform: upper;
-  color:gray;
+  color:$color-gray;
   font-size: 2rem;
   cursor: pointer;
   position:relative;
   overflow: hidden;
   padding: 0 .5rem ;
   transition: color .35s;
-   background: #feca57;
+  background: #feca57;
   animation : moving 2s both ;
    &:nth-child(1){
     animation-delay: 5s;
@@ -108,14 +119,13 @@ body {
     position:absolute;
     top:0;
     left:0;
-    background-color: #ff4757;
+    background-color: $color-secondary;
     height:100%;
     width:100%;
     z-index: -1;
     transform-origin: bottom left;
     transform: translateX(-102%);
     transition: transform .3s;
-    //padding:2px 2px;
   }
   &:hover:before{
     transform: translate(0) ;
@@ -141,7 +151,6 @@ body {
   flex-direction:column;
   justify-content: center;
   align-items: center;  
-  //border:2px solid green;
   border-left: none;
   border-right:none;
   background: transparent;
@@ -151,7 +160,6 @@ body {
   width:100%;
   padding:1rem;
   margin:10vh 0;
-  //transition: all 1s;
   }
   >.about{
     margin:0;
@@ -160,25 +168,21 @@ body {
     height:100vh;
     width:200vw;
     margin:0;
-   
   }
 }
 .homeImage{
-//  width:5000px;
  background:linear-gradient(to top,rgba(11,11,11,.3),rgba(11,11,11,.0)),url(./assets/images/balloon2.png),url(./assets/images/calgary.png);
  background-size:auto 90%,auto 25rem;
  background-position:top left,bottom right;
  background-repeat:repeat-x,no-repeat;
  animation: driving 15s linear infinite;
-//height:100%;
-  //flex:1;
 }
 
 .home{
   font-size: 6rem;
   position: relative;
   font-family: 'Knewave', cursive;
-  color: #ff4757;
+  color: $color-secondary;
   text-transform: lowercase;
   letter-spacing: .5rem;
   //text-shadow: 0 1px 0 #efefef,0 2px 0 #efefef,0 3px 0 #efefef,0 4px 0 #efefef,0 30px 5px rgba(0,0,0,.1);
@@ -192,11 +196,6 @@ body {
   height:100%;
 }
 
-@keyframes driving {
-	from { background-position:top left; }
-
-	to { background-position: top right; }
-}
 
 
 .heading__primary{
@@ -206,7 +205,6 @@ body {
 }
 .heading__secondary{
   animation: moveInRight 2s ease-in-out,join 1s ease-in 3s forwards;
-  //animation: join 1s ease-in 3s forwards;
   margin-top:-3rem;
 }
 
@@ -215,9 +213,6 @@ body {
   animation:io 1s ease-out 3.5s forwards;
 }
 
-
-// .start{
-// }
 .end{
    opacity:1;
    animation: fadeOut 1s 2s forwards;
@@ -245,7 +240,6 @@ body {
   letter-spacing:.2rem;
   text-align:justify;
   overflow:scroll;
-  //text-decoration:none;
 img{
   border:1px solid red;
   border-radius:10px;
@@ -266,11 +260,8 @@ img{
   h1{
     color:white;
     text-transform:capitalize;
-    //border:2px solid green;
     padding:.5rem .8rem;
     border-radius:5px;
-    //background:rgba(0,0,0,.2);
-   // background:linear-gradient(o top,rgba(0,0,0,.3),rgba(0,0,0,.9));
    line-height:2;
    word-spacing:.5rem;
   }
@@ -303,7 +294,6 @@ img{
   }
   &__list{
     width:100%;
-    //height:100%;
     display:flex;
     justify-content: space-evenly;
     align-items: center;
@@ -339,8 +329,6 @@ img{
     text-transform: uppercase;
   }
     &__list{
-    // width:100%;
-    // height:100%;
     display:flex;
     justify-content:center;
     align-items: center;
@@ -349,12 +337,8 @@ img{
     margin:0 auto;
   }
   &__item{
-    //align-self: center;
-    border:.5px solid lightgray;
+    border:.5px solid $color-lightgray;
     box-shadow: 1px 2px 5px rgba(0,0,0,.5);
-    border-radius:5px;
-    //border-top-left-radius: 50px;
-    //border-top-right-radius: 50px;
     min-width:25rem;
     max-width:30rem;
     min-height:20rem;
@@ -372,12 +356,9 @@ img{
 }
 
 .project{
-  //display:flex;
   flex-direction:column;
   overflow:scroll;
-  //width:100%;
   &__summary{
-    //border:1px solid red;
     min-height:15rem;
     display:flex;
      justify-content: space-around;
@@ -386,10 +367,8 @@ img{
   &_logo{
     height:150%;
     width:15rem;
-    //border:1px solid red;
   }
   &_info{
-    //border:1px solid red;
     width:80%;
     height:150%;
   }
@@ -406,18 +385,12 @@ img{
     > img{
       margin:1rem;
       box-shadow: 2px 2px 5px rgba(0,0,0,.5px);
-      border:1px solid gray;
+      border:1px solid $color-gray;
       border-radius:5px;
       &:hover{
       transform:scale(1.2);
       cursor: pointer;
       box-shadow: .5rem .5rem 1.5rem rgba(0,0,0,.5px);
-      //position:absolute;
-      // top:50%;
-      // left:50%;
-      // transform: translate(-50%,-50%);
-      //z-index:5;
-      //flex:1 1 200px;
     }
     }
   }
@@ -440,10 +413,9 @@ img{
   }
 }
 
-
 .footer{
   height: 10vh;
-  background: #feca57;
+  background: $color-primary;
   text-align:right;
   display:flex;
   //flex-direction:column;
@@ -495,15 +467,13 @@ img{
   100% {
     opacity: 0;
     display:none; 
-    } }
+    } 
+    }
 
     @keyframes join {
       0%{
         transform: translate(0%,0%);
       }
-      // 25%{
-      //   transform:translate(32%,0);
-      // }
       50%{
         transform: translate(32%,-70%);
       }
@@ -536,15 +506,14 @@ img{
     transform: translate(150%,-170%);
   }
 }
-
     // moveOut
         @keyframes moveOut1{
       0%{
         opacity:1;
         transform: translate(0,0);
       }
-        45%{
-        opacity:0;
+      45%{
+       opacity:0;
         transform: translate(-20%,-40%) scale(0.52);
       }
         50%{
@@ -552,18 +521,14 @@ img{
         transform: translate(-30%,-50%) scale(0.22);
       }
       80%{
-    
         transform: translate(-30%,-50%);
       }
       100%{
         opacity:0;
         transform: translate(-40%,-100%);
         z-index: -10;
-        
       }
     }
-
-
 
     // changeColor
     @keyframes changeColor{
@@ -573,9 +538,14 @@ img{
       to {
         color:red;
       }
-
     }
+// moving buildings
 
+@keyframes driving {
+	from { background-position:top left; }
+
+	to { background-position: top right; }
+}
 
     // navbar animation
 
@@ -586,22 +556,14 @@ img{
       }
       35%{
         transform: translateY(0);
-        //border-bottom: 1px solid white;
-       
       }
       55%{
         transform :translateY(-2rem);
-        //transition-timing-function: ease-out;
         box-shadow: none;
       }
-
         75%{
         transform: translateY(0);
-        //transition-timing-function: ease-in;
-         //box-shadow: 1px solid white;
-       
       }
-  
        100%{
         transform :translateY(0);
         box-shadow: none;
