@@ -9,46 +9,44 @@
   background-repeat:no-repeat;
   background-position: left center , right center;
   color:white;
-  color:#ff4757;
-  margin:0;
-  padding:0;
+  //color:#ff4757;
+  // margin:0;
+  // padding:0;
   font-weight:900;
-  letter-spacing:.2rem;
+  letter-spacing:.1rem;
   text-align:justify;
   overflow:scroll;
+  word-wrap: break-word;
 img{
-  border:1px solid red;
+  //border:1px solid red;
   border-radius:10px;
-  width:auto;
 }
 &__bio{
-  padding:1rem;
   height:100%;
   width:70%;
-  height:100%;
   padding:2rem;
   @include display-flex(column,nowrap,center,center); 
-  word-wrap: break-word;
-  text-align:justify;
+  
+  // text-align:justify;
   h1{
-    color:white;
+    //color:white;
     text-transform:capitalize;
     padding:.5rem .8rem;
-    border-radius:5px;
-   line-height:2;
-   word-spacing:.5rem;
+    //border-radius:5px;
+    //line-height:2;
+    //word-spacing:.5rem;
   }
   p{
     margin-top: 2rem;
     font-size:2rem;
-    font-family: 'Lato', sans-serif; 
-    color:white;
+    align-self:flex-start;
+    //font-family: 'Lato', sans-serif; 
+    //color:white;
   a{
     text-decoration:none;
     color:green;
   }
   }
- 
 }
 
 }

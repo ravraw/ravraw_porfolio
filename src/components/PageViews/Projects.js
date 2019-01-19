@@ -56,7 +56,9 @@ export default function Projects() {
           img={crazyRavs}
           address="https://github.com/ravraw/crazy_ravs"
         />
-        <Project name={'Cross aisle'} img={tinyApp} />
+        <Project 
+        name={'Cross aisle'} 
+        img={tinyApp} />
       </div>
     </div>
   );

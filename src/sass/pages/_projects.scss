@@ -1,8 +1,9 @@
 // Projects page view
 .projects{
+  overflow:scroll;
   h1{
-    margin:1rem;
-    margin-top:-1rem;
+    //margin:.25rem;
+    //margin-top:-1.5rem;
     text-align:center;
     text-transform: uppercase;
   }
@@ -10,20 +11,31 @@
     @include display-flex(row,wrap,center,center); 
     overflow: scroll;
     margin:0 auto;
+    perspective:2500px;
   }
   &__item{
     border:.5px solid $color-lightgray;
+    border-radius:5px;
     box-shadow: 1px 2px 5px rgba(0,0,0,.5);
     min-width:25rem;
     max-width:30rem;
     min-height:20rem;
     margin:1rem;
     padding:1rem;
-    @include display-flex(column,nowrap,center,center); //@mixin 
+    @include display-flex(column,nowrap,space-evenly,center); //@mixin 
     flex:1;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-size:2.5rem;
+    font-weight:500;
+    transition:all 1.5s;
+    //backface-visibility:hidden;
     img{
     height:15rem;
+    align-self:flex-end;
+    }
+    &:hover{
+      transform:rotateY(360deg);
+      
     }
   }
 }

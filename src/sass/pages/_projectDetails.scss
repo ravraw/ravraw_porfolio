@@ -6,8 +6,8 @@
     min-height:15rem;
       @include display-flex(row,wrap,space-around,center); //@mixin
   &_logo{
-    height:150%;
-    width:15rem;
+ width:auto;
+ height:10rem;
   }
   &_info{
     width:80%;
@@ -15,21 +15,34 @@
   }
   }
   &__gallery{
-    padding:1rem;
-    margin:1rem;
+    padding:.5rem;
+    margin:.5rem;
     border:2px solid green;
     border-radius:5px;
-     @include display-flex(row,wrap,space-evenly,center); 
-    > img{
+    min-width:320px;
+    @include display-flex(row,wrap,center,center); 
+    img{
+      width:45%;
+      height:auto;
+      min-width:28rem;
+      // max-width:500px;
+      //flex:1 1 300px;
       margin:1rem;
       box-shadow: 2px 2px 5px rgba(0,0,0,.5px);
-      border:1px solid $color-gray;
+      //border:2px solid $color-gray;
       border-radius:5px;
+      outline-offset:.5rem;
       &:hover{
-      transform:scale(1.2);
+      transform:translateY(-1rem) scale(1.2);
       cursor: pointer;
-      box-shadow: .5rem .5rem 1.5rem rgba(0,0,0,.5px);
-    }
+      box-shadow: .5rem .5rem 1.75rem rgba(0,0,0,.5px);
+      //outline:3px solid $color-secondary;
+      //outline-radius:10%;
+       :not(:hover){
+       transform:scale(.5);
+     }
+     }
+    
     }
   }
 

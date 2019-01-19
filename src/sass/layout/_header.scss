@@ -3,15 +3,14 @@
   height:20vh;
   background: $color-primary;
   clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
-  @include display-flex(column,wrap,space-around,center);
+  @include display-flex(row,wrap,space-around,center);
   border-bottom:none;
-  border-radius:10px;
+  border-radius:1rem;
   border-bottom-left-radius: 0;
   font-family: 'Knewave', cursive;
-
   // UI > Logo component
 &__logo_box{
-   @include display-flex(row,nowrap,center,center);
+   @include display-flex(row,wrap,center,center);
  }
  &__logo{
   font-size:6rem;
@@ -23,15 +22,15 @@
 
 //Navigation > Nav component
 .nav{
-  height:100%;
-  width:50%;
-  margin-right:10vw;
+  //height:100%;
+  //width:50%;
+  //margin-right:10vw;
 }
 .link__list{
   height: 100%;;
   width:100%;
   @include display-flex(row,nowrap,space-around,center);
-  //flex:auto;
+  flex:auto;
   list-style: none;
 }
 .link__item{
@@ -75,11 +74,11 @@
     z-index: -1;
     transform-origin: bottom left;
     transform: translateX(-102%);
-    transition: transform .3s;
+    transition: all .3s;
   }
   &:hover:before{
     transform: translate(0) ;
-    border-radius:5px;
+    border-radius:.5rem;
   }
   &:hover{
     color:white;
@@ -92,5 +91,14 @@
   transform:scale(1.2);
   color:white;
   background-color: #ff4757;
-  border-radius:5px;
+  border-radius:.5rem;
 }
+
+
+// media queries
+  @media (max-width:475px){
+    .header{
+      display:block;
+    }
+  }
+   

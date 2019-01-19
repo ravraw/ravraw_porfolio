@@ -5,3 +5,73 @@
   justify-content:$justify-content;
   align-items:$align-items;
 }
+
+// media query manager
+
+/*
+0 - 320 Mob-S
+320 - 375 Mob-M
+375 - 425 Mob-L
+425 - 768 Tab-
+768 - 1024 Lap-S
+1024 - 1440 Lap-M
+1440 - 1800 Lab-L 
+1800  Desk-L
+*/
+
+@mixin respond($breakpoint){
+  @if $breakpoint == Mob-S {
+    @media(max-width:320px){
+     @content 
+    }
+  };
+
+   @if $breakpoint == Mob-M {
+    @media(max-width:375px){
+     @content 
+    }
+  };
+
+   @if $breakpoint == Mob-L {
+    @media(max-width:425px){
+     @content 
+    }
+  };
+
+   @if $breakpoint == Tab-P {
+    @media(max-width:568px){
+     @content 
+    }
+  };
+
+   @if $breakpoint == Tab-L {
+    @media(max-width:768px){
+     @content 
+    }
+  };
+
+   @if $breakpoint == Lap-S {
+    @media(max-width:1024px){
+     @content 
+    }
+  };
+
+    @if $breakpoint == Lap-M {
+    @media(max-width:1440px){
+     @content 
+    }
+  };
+
+    @if $breakpoint == Lap-L {
+    @media(max-width:1800px){
+     @content 
+    }
+  };
+
+    @if $breakpoint == Desk-L {
+    @media(max-width:2000px){
+     @content 
+    }
+  };
+ 
+}
