@@ -9,7 +9,19 @@
 
 html {
   font-size: 62.5%; // helps with responsive design using REM
-      @include respond(Tab-L){
+  @include respond(Desk-L){
+    font-size:120%;
+  };
+  @include respond(Lap-L){
+    font-size:65%;
+  };
+    @include respond(Lap-M){
+    font-size:62.5%;
+  };
+  @include respond(Lap-S){
+    font-size:53%;
+  };
+  @include respond(Tab-L){
     font-size:50%;
   };
     @include respond(Tab-P){

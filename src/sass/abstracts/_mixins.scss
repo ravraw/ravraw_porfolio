@@ -18,58 +18,59 @@
 1440 - 1800 Lab-L 
 1800  Desk-L
 */
-
+// mobile-small
 @mixin respond($breakpoint){
   @if $breakpoint == Mob-S {
     @media(max-width:320px){
      @content 
     }
   };
-
+// mobile-medium
    @if $breakpoint == Mob-M {
     @media(max-width:375px){
      @content 
     }
   };
 
+// mobile -large
    @if $breakpoint == Mob-L {
     @media(max-width:425px){
      @content 
     }
   };
-
+// tablets - potrait
    @if $breakpoint == Tab-P {
     @media(max-width:568px){
      @content 
     }
   };
-
+// tables - landscape
    @if $breakpoint == Tab-L {
     @media(max-width:768px){
      @content 
     }
   };
-
+// small laptops
    @if $breakpoint == Lap-S {
     @media(max-width:1024px){
      @content 
     }
   };
-
+// medium laptops
     @if $breakpoint == Lap-M {
     @media(max-width:1440px){
      @content 
     }
   };
-
+// large laptops
     @if $breakpoint == Lap-L {
     @media(max-width:1800px){
      @content 
     }
   };
-
-    @if $breakpoint == Desk-L {
-    @media(max-width:2000px){
+// screens larger than 2000px
+    @if $breakpoint == Desk-L {  
+    @media(min-width:2000px){
      @content 
     }
   };
