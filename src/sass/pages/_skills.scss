@@ -9,7 +9,7 @@
   }
   &__list{
     width:100%;
-    @include display-flex(row,nowrap,space-evenly,center); 
+    @include display-flex(row,wrap,space-evenly,center); 
   }
   &__item{
     border:1px solid red;
