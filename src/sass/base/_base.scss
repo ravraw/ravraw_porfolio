@@ -59,4 +59,11 @@ body {
 .layout{
   height:95vh;
   width: 95vw;
+// media query
+  @include respond(Mob-L){
+   height:100vh;
+   margin-top:auto 0;
+   width:100vw;
+  };
 }
+

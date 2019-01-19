@@ -8,10 +8,14 @@
     text-transform: uppercase;
   }
     &__list{
-    @include display-flex(row,wrap,center,center); 
     overflow: scroll;
-    margin:0 auto;
+    //@include display-flex(row,wrap,center,center); 
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(30rem,1fr));
+    grid-gap:1rem;
     perspective:2500px;
+    border:1px solid green;
+    
   }
   &__item{
     border:.5px solid $color-lightgray;
@@ -20,14 +24,13 @@
     min-width:25rem;
     max-width:30rem;
     min-height:20rem;
-    margin:1rem;
     padding:1rem;
     @include display-flex(column,nowrap,space-evenly,center); //@mixin 
     flex:1;
     text-transform: capitalize;
     font-size:2.5rem;
     font-weight:500;
-    transition:all 1.5s;
+    transition:transform 1.5s;
     //backface-visibility:hidden;
     img{
     height:15rem;

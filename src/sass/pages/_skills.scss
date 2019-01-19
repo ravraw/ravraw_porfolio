@@ -2,6 +2,8 @@
 
 .skills{
   @include display-flex(column,nowrap,flex-start,center); 
+   overflow:scroll;
+  
   h1{
     margin:1rem;
     margin-top:-1rem;
@@ -10,6 +12,10 @@
   &__list{
     width:100%;
     @include display-flex(row,wrap,space-evenly,center); 
+  //         @include respond(Mob-L){
+  //   @include display-flex(column,nowrap,space-evenly,center); 
+  // };
+   
   }
   &__item{
     border:1px solid red;
