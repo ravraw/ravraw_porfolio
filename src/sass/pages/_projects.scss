@@ -13,7 +13,8 @@
     //@include display-flex(row,wrap,center,center); 
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(30rem,1fr));
-    grid-template-rows:repeat(auto-fit,minmax(auto,1fr));
+    //grid-template-rows:repeat(auto-fit,minmax(auto,1fr));
+    grid-auto-rows:auto;
     grid-gap:2rem;
     perspective:2500px;
     border:1px solid green; 
@@ -22,10 +23,10 @@
     border:.5px solid $color-lightgray;
     border-radius:5px;
     box-shadow: 1px 2px 5px rgba(0,0,0,.5);
-    min-width:25rem;
-    max-width:30rem;
-    min-height:20rem;
-    max-height:40rem;
+    // min-width:25rem;
+    // max-width:30rem;
+    // min-height:20rem;
+    // max-height:40rem;
     padding:1rem;
     @include display-flex(column,nowrap,space-evenly,center); //@mixin 
     flex:1;
