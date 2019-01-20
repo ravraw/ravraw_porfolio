@@ -7,7 +7,7 @@ import sassLogo from '../../assets/images/sass.png';
 export default function() {
   return (
     <footer className="footer">
-      <p>Built with :</p>
+      <p>Sorry -- this site is work in progress :</p>
       <img src={sassLogo} alt="img" />
       <img src={reactRouterLogo} alt="img" />
       <img src={reactLogo} alt="img" />

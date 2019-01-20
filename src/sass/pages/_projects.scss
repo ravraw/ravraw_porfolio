@@ -26,7 +26,7 @@
     // min-width:25rem;
     // max-width:30rem;
     // min-height:20rem;
-    // max-height:40rem;
+    max-height:40rem;
     padding:1rem;
     @include display-flex(column,nowrap,space-evenly,center); //@mixin 
     flex:1;
@@ -42,6 +42,16 @@
     &:hover{
       transform:rotateY(360deg);
       
+    }
+  }
+}
+
+@include respond(Mob-L){
+  .projects__item{
+max-height:15rem;
+   img{
+    height:10rem;
+    align-self:flex-end;
     }
   }
 }

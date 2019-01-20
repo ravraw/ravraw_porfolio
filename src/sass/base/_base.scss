@@ -22,10 +22,10 @@ html {
     font-size:58%;
   };
   @include respond(Tab-L){
-    font-size:53%;
+    font-size:49%;
   };
     @include respond(Tab-P){
-    font-size:49%;
+    font-size:45%;
   };
     @include respond(Mob-L){
     font-size:44%;
