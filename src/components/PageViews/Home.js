@@ -13,15 +13,12 @@ export default function Home() {
           <span>Rav</span>
           <span className="end">indra</span>
         </h1>
-
         <h1 className="heading__secondary">
           <span className="raw">Raw</span>
           <span className="end">at</span>
         </h1>
         <h1 className="heading__tertiary">.io</h1>
-         
       </div>
-      
       </div>
      
     </React.Fragment>

@@ -27,7 +27,7 @@ export default function About() {
           skills as a professional.
         </p>
         <p>
-          Currently, I am looking for an opportunity as a "Junior web developer"
+          Currently, I am looking for an opportunity as a "Full-stack Web developer"
           and working on side projects to enhance my skills.
         </p>
         <p>

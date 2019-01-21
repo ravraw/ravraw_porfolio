@@ -15,8 +15,9 @@ export default function Skills() {
             <li>Bootstrap</li>
             <li>React</li>
             <li>React router</li>
-            <li>Jest / Enzime(testing)</li>
-            <li>Webpack / Babel (Bundling)</li>
+            <li>Jest / Enzyme (testing)</li>
+            <li>Webpack (Bundling)</li>
+            <li>Babel  (Compiler)</li>
             <li>GIT (version control)</li>
           </ul>
         </div>
